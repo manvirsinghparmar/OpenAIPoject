@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "build:landing": "vite build --config vite.landing.config.ts",
+    "build:landing": "vite build --config vite.landing.config.ts && node -e \"require('fs').renameSync('dist-landing/landing.html','dist-landing/index.html')\"",
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest",
